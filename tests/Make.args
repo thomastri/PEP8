@@ -1,0 +1,23 @@
+# -*- makefile -*-
+
+# Test names.
+# Add each test case name, one per line, with a \ at the end
+TESTS = $(addprefix tests/, \
+    minimum \
+    disasm2 \
+    disasm3 \
+    interp1 \
+    interp2 \
+    interp3 \
+)
+
+# Test case arguments
+# For each test case you named above, you need an _ARGS line that specifies
+# the command-line arguments to pass. For instance, if you were testing the
+# "tar" program with tar xvfz myfile.tgz, the args would be xvfz myfile.tgz.
+tests/minimum_ARGS = ../fig_5_7.pep8
+tests/disasm2_ARGS = ../figgy.pep8
+tests/disasm3_ARGS = ../figgy2.pep8
+tests/interp1_ARGS = -i ../fig_5_7.pep8
+tests/interp2_ARGS = -i ../figgy.pep8
+tests/interp3_ARGS = -i ../figgy2.pep8
